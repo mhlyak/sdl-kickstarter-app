@@ -224,10 +224,10 @@ public class SdlService extends Service implements IProxyListenerALM {
         //startProxy(forceConnect, intent);
 
         // Normal working
-        // startNormalProxy(forceConnect, intent);
+        startNormalProxy(forceConnect, intent);
 
         // Videostreaming test
-        startNavigationProxy(forceConnect, intent);
+        // startNavigationProxy(forceConnect, intent);
 
         //use START_STICKY because we want the SDLService to be explicitly started and stopped as needed.
         return START_STICKY;
