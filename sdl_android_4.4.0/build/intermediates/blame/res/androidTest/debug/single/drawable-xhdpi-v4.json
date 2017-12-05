@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Projekti\\Mobile\\MMApp\\sdl_android_4.4.0\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\sdl_tray_icon.png",
+        "source": "D:\\Projekti\\Mobile\\MMApp\\sdl_android_4.4.0\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\sdl_tray_icon.png"
+    },
+    {
+        "merged": "D:\\Projekti\\Mobile\\MMApp\\sdl_android_4.4.0\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_sdl.png",
+        "source": "D:\\Projekti\\Mobile\\MMApp\\sdl_android_4.4.0\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_sdl.png"
+    }
+]

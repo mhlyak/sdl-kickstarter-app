@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MMApp</string>
+    <string name="title_home">Home 2017-10-25</string>
+    <string name="title_dashboard">Dashboard 2017-10-25</string>
+    <string name="title_notifications">Notifications 2017-10-25</string>
+
+    <string name="title_activity_lock_screen">LockScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

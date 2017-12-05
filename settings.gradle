@@ -1,0 +1,1 @@
+include ':app', ':sdl_android_4.4.0'
