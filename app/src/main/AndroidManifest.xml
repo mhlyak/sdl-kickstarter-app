@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mhlyak.mmapp">
+
+    <!--
+         SDL permissions
+        Internet - Used by the mobile library to communicate with a SDL Server
+        Bluetooth - Primary transport for SDL communication between the device and the vehicle's head-unit
+        Access Network State - Required to check if WiFi is enabled on the device
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".MMAppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.HomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LockScreenActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
+        <!-- SDL services -->
+        <service
+            android:name=".sdl.services.SdlService"
+            android:enabled="true" />
+        <service
+            android:name=".sdl.services.SdlRouterService"
+            android:exported="true"
+            android:process="com.smartdevicelink.router" />
+        <!-- end of SDL services -->
+
+
+        <!-- SDL receiver -->
+        <receiver
+            android:name=".sdl.receiver.SdlReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="sdl.router.startservice" />
+
+                <!-- The intent sdl.router.startservice is a custom intent that will come from the SdlRouterService to tell us that we have just connected to an SDL enabled piece of hardware. -->
+            </intent-filter>
+        </receiver>
+        <!-- end of SDL receiver -->
+    </application>
+
+</manifest>
